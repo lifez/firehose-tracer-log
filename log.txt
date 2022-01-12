@@ -1,0 +1,2 @@
+{"timestamp": "11-01-2022 16:37:21", "body": "{\r\n\"a\":1\r\n}", "method": "publish.", "routing_keys": ["abc"]}
+{"timestamp": "11-01-2022 16:37:30", "body": "{\r\n\"a\":1\r\n}", "method": "publish.", "routing_keys": ["abc"]}
