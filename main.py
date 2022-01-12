@@ -8,9 +8,6 @@ if __name__ == "__main__":
     host = os.getenv("HOST", "localhost")
     port = os.getenv("PORT", 5672)
     queue_name = os.getenv("QUEUE_NAME", "firehose")
-    print(host)
-    print(port)
-    
 
     connection = pika.BlockingConnection(pika.ConnectionParameters(
             host=host, port=port))
