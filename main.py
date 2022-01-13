@@ -23,7 +23,7 @@ if __name__ == "__main__":
     print(' [*] Waiting for logs. To exit press CTRL+C')
     
     def callback(ch, method, properties, body):
-        with open('log.txt', 'a') as f:
+        with open('logs/log.txt', 'a') as f:
             log = json.dumps({"timestamp": datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S"),"body":body.decode(), "method": method.routing_key, "routing_keys": properties.headers["routing_keys"]})
             f.write(log + "\n")
     

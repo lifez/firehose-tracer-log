@@ -1,0 +1,1 @@
+* * * * * mv /app/logs/log.txt /app/logs/$(date +'%d_%m_%Y_%s').txt  2>&1
