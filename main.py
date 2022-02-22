@@ -24,7 +24,7 @@ if __name__ == "__main__":
     
     def callback(ch, method, properties, body):
         with open('logs/log.txt', 'a') as f:
-            log = json.dumps({"timestamp": datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S"),"body":body.decode(), "method": method.routing_key, "routing_keys": properties.headers["routing_keys"]})
+            log = json.dumps({"timestamp": datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S"),"properties": properties.headers['properties']['headers'],"body":body.decode(), "method": method.routing_key, "routing_keys": properties.headers["routing_keys"]})
             f.write(log + "\n")
     
     channel.basic_consume(on_message_callback=callback,
